@@ -11,7 +11,7 @@
         html { scroll-behavior: smooth; }
 
         body {
-            background-color: #0b0c10; /* Hitam pekat kebiruan */
+            background-color: #0b0c10; 
             color: #c5c6c7;            
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -40,7 +40,7 @@
             font-size: 22px;
             font-weight: 900;
             letter-spacing: 2px;
-            background: linear-gradient(90deg, #fce043, #fb7ba2); /* Gradasi Kuning ke Pink */
+            background: linear-gradient(90deg, #fce043, #fb7ba2); 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -52,7 +52,7 @@
             font-weight: 700;
             transition: color 0.3s;
         }
-        nav a:hover { color: #66fcf1; } /* Warna Cyan saat disorot */
+        nav a:hover { color: #66fcf1; }
 
         /* PENGATURAN SECTION */
         .bagian-halaman {
@@ -67,7 +67,7 @@
             margin: 0;
             letter-spacing: 2px;
             line-height: 1;
-            background: linear-gradient(90deg, #4568dc, #b06ab3); /* Biru ke Ungu */
+            background: linear-gradient(90deg, #4568dc, #b06ab3); 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -87,7 +87,7 @@
         .teks-utama { font-size: 22px; line-height: 1.6; color: #ffffff; margin-top: 0; font-weight: 700;}
         .teks-deskripsi { font-size: 16px; color: #a9a9a9; line-height: 1.8; margin-top: 20px; }
         
-        /* FOTO PROFIL (Sudah disesuaikan dengan nama filemu) */
+        /* FOTO PROFIL UTAMA */
         .foto-profil {
             width: 180px;
             height: 180px;
@@ -101,7 +101,7 @@
             box-shadow: 0 0 20px rgba(251, 123, 162, 0.3);
         }
 
-        /* KARTU KEAHLIAN & PENGALAMAN (Card Design) */
+        /* KARTU PENGALAMAN & SKILLS */
         .kartu {
             background-color: #12161c;
             border-left: 5px solid;
@@ -116,15 +116,25 @@
         .kartu-kuning { border-color: #fce043; }
 
         .kartu h4 { margin: 0 0 10px 0; font-size: 20px; color: #ffffff; }
-        .kartu h5 { margin: 0 0 10px 0; color: #66fcf1; font-weight: 400; letter-spacing: 1px;}
+        .kartu h5 { margin: 0 0 15px 0; color: #66fcf1; font-weight: 400; letter-spacing: 1px;}
         .kartu p { margin: 0; color: #a9a9a9; font-size: 14px; line-height: 1.6; }
+
+        /* FOTO DI DALAM KARTU PENGALAMAN */
+        .foto-pengalaman {
+            width: 100%;             /* Mengisi penuh lebar kartu */
+            height: 220px;           /* Tinggi seragam untuk semua foto */
+            object-fit: cover;       /* Memastikan foto tidak gepeng */
+            border-radius: 5px;      /* Ujung foto sedikit melengkung */
+            margin-bottom: 15px;     /* Jarak antara foto dan judul */
+            border: 1px solid #1f2833;
+        }
 
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">FARREL.ART</div>
+        <div class="logo">PALEH.ART</div>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -163,9 +173,7 @@
                     <div style="background: linear-gradient(45deg, #12161c, #1f2833); padding: 40px; border-radius: 15px; text-align: center;">
                         <h3 style="font-size: 60px; margin: 0; color: #66fcf1;">100%</h3>
                         <p style="color: #a9a9a9; letter-spacing: 2px; font-size: 14px; margin-top: 10px;">PASSION FOR ART</p>
-                        
                         <div style="height: 1px; background: #333; margin: 30px 0;"></div>
-                        
                         <h3 style="font-size: 60px; margin: 0; color: #fce043;">ALL</h3>
                         <p style="color: #a9a9a9; letter-spacing: 2px; font-size: 14px; margin-top: 10px;">BAND INSTRUMENTS</p>
                     </div>
@@ -174,21 +182,43 @@
         </section>
 
         <section id="experience" class="bagian-halaman">
-            <h1 class="judul-raksasa" style="background: linear-gradient(90deg, #fb7ba2, #fce043); -webkit-background-clip: text;">STAGE</h1>
+            <h1 class="judul-raksasa" style="background: linear-gradient(90deg, #fb7ba2, #fce043); -webkit-background-clip: text;">EXPERIENCE</h1>
             <div class="garis-bawah" style="background: linear-gradient(90deg, #fb7ba2, #fce043);"></div>
             
-            <p class="teks-utama" style="margin-bottom: 40px;">Pengalaman Membawa Atmosfer ke Atas Panggung</p>
+            <p class="teks-utama" style="margin-bottom: 40px;">Menggerakkan Komunitas dan Menghidupkan Panggung</p>
 
-            <div class="kartu kartu-ungu">
-                <h4>Live Music Performer</h4>
-                <h5>📍 Bagi Kopi Jombang</h5>
-                <p>Menjadi penampil reguler untuk sesi <i>live music</i> akustik dan full-band. Bertanggung jawab sebagai vokalis utama sekaligus membangun interaksi yang hangat dengan para pengunjung kafe untuk menghidupkan suasana akhir pekan.</p>
-            </div>
+            <div class="konten-grid">
+                <div class="kolom-kiri">
+                    <div class="kartu kartu-kuning">
+                        <img src="foto_dapurseni.jpg" alt="Dapur Seni" class="foto-pengalaman">
+                        <h4>Vice Chairman of Dapur Seni</h4>
+                        <h5>📍 Organisasi Seni (Periode 2025/2026)</h5>
+                        <p>Dipercaya menjadi salah satu kemudi bagi komunitas kreatif mahasiswa. Bertanggung jawab mengarahkan visi artistik, mengelola acara kesenian, serta menyediakan ruang aman bagi talenta muda kampus untuk mengekspresikan <i>passion</i> mereka di bidang musik dan seni rupa.</p>
+                    </div>
 
-            <div class="kartu kartu-cyan">
-                <h4>Guest Performer</h4>
-                <h5>📍 Kopi Kelawai</h5>
-                <p>Membawakan setlist lagu dengan berbagai genre untuk menghibur pelanggan. Mengadaptasi gaya bermusik dengan <i>vibes</i> kafe, serta melakukan penyesuaian alat musik secara langsung di atas panggung.</p>
+                    <div class="kartu kartu-ungu">
+                        <img src="foto_wagufest.jpg" alt="Wagufest" class="foto-pengalaman">
+                        <h4>Live Music Performer</h4>
+                        <h5>📍 Pre-Event Wagufest (Japanese Event)</h5>
+                        <p>Membawa energi J-Pop dan J-Rock ke atas panggung! Dipercaya mengisi acara dengan <i>setlist</i> khusus untuk pecinta kultur pop Jepang. Pengalaman ini sangat berkesan karena menuntut adaptasi genre yang spesifik dan kemampuan membangun <i>hype</i> bersama *crowd* yang antusias.</p>
+                    </div>
+                </div>
+
+                <div class="kolom-kanan">
+                    <div class="kartu kartu-cyan">
+                        <img src="foto_kampus.jpg" alt="Kampus UIN" class="foto-pengalaman">
+                        <h4>Routine Campus Performer</h4>
+                        <h5>📍 Lingkungan Kampus UIN Syarif Hidayatullah Jakarta</h5>
+                        <p>Menjadi penampil langganan di berbagai <i>gigs</i> dan pentas seni kampus. Konsistensi manggung di area ini memperkuat <i>stage presence</i> saya sebagai *frontman* sekaligus membangun koneksi erat dengan skena musik mahasiswa lokal.</p>
+                    </div>
+
+                    <div class="kartu kartu-ungu" style="border-color: #fb7ba2;">
+                        <img src="foto_kafe.jpg" alt="Live Music Cafe" class="foto-pengalaman">
+                        <h4>Acoustic & Full-Band Session</h4>
+                        <h5>📍 Bagi Kopi Jombang & Kopi Kelawai</h5>
+                        <p>Tampil sebagai *performer* reguler dan bintang tamu di skena kafe lokal. Bertugas menghidupkan suasana akhir pekan melalui interaksi yang hangat, serta beradaptasi secara langsung meracik <i>sound</i> dan instrumen di atas panggung.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
