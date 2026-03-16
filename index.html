@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farrel Tryardan Kusuma | Art & Music Portfolio</title>
+    <title>Farrel Tryardan Kusuma| Art & Music Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
@@ -22,7 +22,7 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
-            overflow-x: hidden; /* Mencegah layar bisa digeser ke samping di HP */
+            overflow-x: hidden; 
         }
 
         /* HEADER STICKY */
@@ -55,11 +55,11 @@
         }
         nav a:hover { color: #66fcf1; }
 
-        /* PENGATURAN SECTION */
+        /* PENGATURAN SECTION (JARAK SUDAH DIPERBAIKI) */
         .bagian-halaman {
-            min-height: 100vh;
-            padding-top: 100px;
-            padding-bottom: 50px;
+            padding-top: 70px;     /* Jarak atas diperkecil */
+            padding-bottom: 40px;  /* Jarak bawah diperkecil */
+            scroll-margin-top: 90px; /* Mencegah judul tertutup header saat menu diklik */
         }
 
         /* TIPOGRAFI GRADASI COLORFUL */
@@ -78,7 +78,7 @@
             height: 4px;
             background: linear-gradient(90deg, #66fcf1, #45a29e);
             margin-top: 15px;
-            margin-bottom: 50px;
+            margin-bottom: 40px; /* Jarak bawah garis diperkecil */
             border-radius: 5px;
         }
 
@@ -136,7 +136,6 @@
            ======================================================== */
         @media screen and (max-width: 768px) {
             
-            /* Header / Menu Navigasi disesuaikan agar tidak menumpuk */
             header {
                 flex-direction: column;
                 padding: 15px 10px;
@@ -147,34 +146,31 @@
                 font-size: 13px;
             }
 
-            /* Halaman Home: Teks diperkecil agar tidak memotong layar */
             #home h1 { font-size: 50px !important; }
             #home h2 { font-size: 22px !important; }
             #home p { font-size: 12px !important; }
 
-            /* Grid Layout: Ubah dari menyamping (kiri-kanan) menjadi atas-bawah */
             .konten-grid {
                 flex-direction: column;
                 gap: 30px;
             }
 
-            /* Judul Raksasa diperkecil */
             .judul-raksasa { font-size: 60px; }
             .teks-utama { font-size: 18px; }
             
-            /* Tengahkan foto profil di HP */
             .foto-profil {
                 display: block;
                 margin: 0 auto 20px auto;
             }
 
-            /* Sesuaikan ukuran kotak angka statistik di About */
             .kolom-kanan > div { padding: 25px !important; }
             .kolom-kanan h3 { font-size: 45px !important; }
             
-            /* Sesuaikan padding halaman */
+            /* Jarak di HP juga disesuaikan agar lebih rapat */
             .bagian-halaman {
-                padding-top: 130px; /* Jarak ekstra karena header jadi 2 baris */
+                padding-top: 50px; 
+                padding-bottom: 30px;
+                scroll-margin-top: 130px; /* Offset untuk header 2 baris di HP */
             }
         }
 
@@ -194,7 +190,7 @@
 
     <div class="container">
         
-        <section id="home" class="bagian-halaman" style="display: flex; flex-direction: column; justify-content: center; min-height: 80vh;">
+        <section id="home" style="display: flex; flex-direction: column; justify-content: center; min-height: 85vh; padding-top: 20px;">
             <p style="color: #66fcf1; letter-spacing: 4px; font-weight: 700; margin-bottom: 5px;">WELCOME TO MY CREATIVE SPACE</p>
             <h1 style="font-size: 80px; margin: 0 0 10px 0; color: #ffffff;">Farrel Tryardan Kusuma.</h1>
             <h2 style="color: #fb7ba2; font-weight: 400; font-size: 30px; margin-top: 0;">Vocalist, Multi-Instrumentalist & Visual Artist.</h2>
