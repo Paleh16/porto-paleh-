@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Farrel Tryardan Kusuma</title>
+    <title>Farrel Tryardan Kusuma | Art & Music Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        /* 1. CSS AJAIB UNTUK SCROLL MULUS */
-        html {
-            scroll-behavior: smooth; 
-        }
+        /* CSS AJAIB: TEMA COLORFUL & ARTSY */
+        html { scroll-behavior: smooth; }
 
         body {
-            background-color: #080808; 
-            color: #ffffff;            
+            background-color: #0b0c10; /* Hitam pekat kebiruan */
+            color: #c5c6c7;            
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
@@ -26,94 +24,122 @@
             padding: 0 20px;
         }
 
-        /* --- HEADER STICKY (Menempel di Atas Saat Di-scroll) --- */
+        /* HEADER STICKY */
         header {
             position: sticky;
-            top: 0; /* Menempel di paling atas layar */
-            background-color: #080808; /* Background hitam agar menutupi teks di bawahnya */
-            padding: 30px 20px;
+            top: 0;
+            background-color: rgba(11, 12, 16, 0.95);
+            padding: 25px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 100; /* Memastikan header selalu berada di lapisan paling depan */
-            border-bottom: 1px solid #1a1a1a; /* Garis tipis pembatas header */
+            z-index: 100;
+            border-bottom: 1px solid #1f2833;
         }
         .logo {
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 22px;
+            font-weight: 900;
             letter-spacing: 2px;
-            text-transform: uppercase;
+            background: linear-gradient(90deg, #fce043, #fb7ba2); /* Gradasi Kuning ke Pink */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         nav a {
-            color: #888888; 
+            color: #c5c6c7; 
             text-decoration: none;
             margin-left: 30px;
             font-size: 14px;
+            font-weight: 700;
             transition: color 0.3s;
         }
-        nav a:hover {
-            color: #ffffff; 
-            font-weight: 700;
-        }
+        nav a:hover { color: #66fcf1; } /* Warna Cyan saat disorot */
 
-        /* --- PENGATURAN TIAP BAGIAN (SECTION) --- */
+        /* PENGATURAN SECTION */
         .bagian-halaman {
-            min-height: 100vh; /* Tinggi minimal 1 layar penuh */
-            padding-top: 100px; /* Jarak dari atas agar tidak tertutup header */
+            min-height: 100vh;
+            padding-top: 100px;
         }
 
-        /* --- GAYA TEKS (Sama seperti sebelumnya) --- */
+        /* TIPOGRAFI GRADASI COLORFUL */
         .judul-raksasa {
-            font-size: 110px;
+            font-size: 100px;
             font-weight: 900;
             margin: 0;
             letter-spacing: 2px;
             line-height: 1;
+            background: linear-gradient(90deg, #4568dc, #b06ab3); /* Biru ke Ungu */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .garis-bawah {
-            width: 100px;
-            height: 2px;
-            background-color: #ffffff;
-            margin-top: 15px;
-            margin-bottom: 60px;
-        }
-        .konten-grid { display: flex; gap: 80px; }
-        .kolom-kiri { flex: 1.5; }
-        .kolom-kanan { flex: 1; }
-        .teks-utama { font-size: 22px; line-height: 1.6; color: #dddddd; margin-top: 0; }
-        .teks-deskripsi { font-size: 15px; color: #888888; line-height: 1.8; margin-top: 25px; }
-        
-        /* Foto Profil */
-        .foto-profil {
             width: 150px;
-            height: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, #66fcf1, #45a29e);
+            margin-top: 15px;
+            margin-bottom: 50px;
+            border-radius: 5px;
+        }
+
+        /* LAYOUT & TEKS */
+        .konten-grid { display: flex; gap: 60px; }
+        .kolom-kiri { flex: 1.2; }
+        .kolom-kanan { flex: 1; }
+        .teks-utama { font-size: 22px; line-height: 1.6; color: #ffffff; margin-top: 0; font-weight: 700;}
+        .teks-deskripsi { font-size: 16px; color: #a9a9a9; line-height: 1.8; margin-top: 20px; }
+        
+        /* FOTO PROFIL (Sudah disesuaikan dengan nama filemu) */
+        .foto-profil {
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 50%;
-            border: 3px solid #ffffff;
+            border: 4px solid transparent;
+            background-image: linear-gradient(#0b0c10, #0b0c10), linear-gradient(to right, #fce043, #fb7ba2);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
             margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(251, 123, 162, 0.3);
         }
+
+        /* KARTU KEAHLIAN & PENGALAMAN (Card Design) */
+        .kartu {
+            background-color: #12161c;
+            border-left: 5px solid;
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            transition: transform 0.3s;
+        }
+        .kartu:hover { transform: translateY(-5px); }
+        .kartu-ungu { border-color: #b06ab3; }
+        .kartu-cyan { border-color: #66fcf1; }
+        .kartu-kuning { border-color: #fce043; }
+
+        .kartu h4 { margin: 0 0 10px 0; font-size: 20px; color: #ffffff; }
+        .kartu h5 { margin: 0 0 10px 0; color: #66fcf1; font-weight: 400; letter-spacing: 1px;}
+        .kartu p { margin: 0; color: #a9a9a9; font-size: 14px; line-height: 1.6; }
+
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Farrel Tryardan Kusuma</div>
+        <div class="logo">FARREL.ART</div>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
         </nav>
     </header>
 
     <div class="container">
         
-        <section id="home" class="bagian-halaman">
-            <p style="color: #888; letter-spacing: 3px;">HELLO, I AM</p>
-            <h1 style="font-size: 70px; margin: 10px 0;">Farrel Tryardan Kusuma.</h1>
-            <h2 style="color: #888; font-weight: 400;">Information Systems Student & Web Developer.</h2>
+        <section id="home" class="bagian-halaman" style="display: flex; flex-direction: column; justify-content: center; min-height: 80vh;">
+            <p style="color: #66fcf1; letter-spacing: 4px; font-weight: 700;">WELCOME TO MY CREATIVE SPACE</p>
+            <h1 style="font-size: 80px; margin: 10px 0; color: #ffffff;">Farrel Tryardan Kusuma.</h1>
+            <h2 style="color: #fb7ba2; font-weight: 400; font-size: 30px; margin-top: 0;">Vocalist, Multi-Instrumentalist & Visual Artist.</h2>
         </section>
-
 
         <section id="about" class="bagian-halaman">
             <h1 class="judul-raksasa">ABOUT</h1>
@@ -123,38 +149,75 @@
                 <div class="kolom-kiri">
                     <img src="WIN_20260316_04_42_11_Pro.jpg" alt="Foto Farrel" class="foto-profil">
                     <p class="teks-utama">
-                        Saya adalah mahasiswa Sistem Informasi yang antusias dalam merancang solusi digital yang menggabungkan fungsionalitas dan efisiensi.
+                        Seni adalah bahasa utama saya. Baik itu menghidupkan panggung melalui alunan musik, maupun menuangkan imajinasi ke atas kanvas.
                     </p>
                     <p class="teks-deskripsi">
-                        Perjalanan saya dimulai dari rasa ingin tahu tentang cara sebuah sistem bekerja, yang kini berkembang menjadi kecintaan dalam membangun aplikasi dan menganalisis proses bisnis. Saat sedang tidak berada di depan layar, saya biasanya mengeksplorasi dunia produksi musik, bermain gitar, atau menikmati video game.
+                        Sebagai seorang <i>frontman</i> dan vokalis, saya terbiasa membangun energi penonton. Namun, kecintaan saya pada musik tidak berhenti di vokal; saya menguasai berbagai instrumen band—mulai dari memetik gitar, mencabik bass, hingga menjaga ketukan drum—untuk memahami harmoni lagu secara utuh.
+                    </p>
+                    <p class="teks-deskripsi">
+                        Selain tampil secara <i>live</i>, saya juga sangat menikmati proses eksplorasi di balik layar, mengulik proses <i>mixing</i> dan <i>recording</i> audio agar setiap instrumen terdengar menyatu sempurna. Di luar musik, saya menyalurkan ekspresi visual melalui hobi menggambar.
                     </p>
                 </div>
 
                 <div class="kolom-kanan">
-                    <h3 style="letter-spacing: 3px; border-bottom: 1px solid #222; padding-bottom: 15px;">EXPERTISE</h3>
-                    <div style="margin-bottom: 35px;">
-                        <h4 style="margin: 0 0 10px 0;">System Analysis & Design</h4>
-                        <p style="color: #888; font-size: 14px; line-height: 1.6;">Menganalisis kebutuhan pengguna dan merancang diagram alur untuk memastikan aplikasi berjalan secara logis.</p>
-                    </div>
-                    <div>
-                        <h4 style="margin: 0 0 10px 0;">Web Development</h4>
-                        <p style="color: #888; font-size: 14px; line-height: 1.6;">Membangun antarmuka interaktif dan fungsional, seperti aplikasi Learning Management System (LMS).</p>
+                    <div style="background: linear-gradient(45deg, #12161c, #1f2833); padding: 40px; border-radius: 15px; text-align: center;">
+                        <h3 style="font-size: 60px; margin: 0; color: #66fcf1;">100%</h3>
+                        <p style="color: #a9a9a9; letter-spacing: 2px; font-size: 14px; margin-top: 10px;">PASSION FOR ART</p>
+                        
+                        <div style="height: 1px; background: #333; margin: 30px 0;"></div>
+                        
+                        <h3 style="font-size: 60px; margin: 0; color: #fce043;">ALL</h3>
+                        <p style="color: #a9a9a9; letter-spacing: 2px; font-size: 14px; margin-top: 10px;">BAND INSTRUMENTS</p>
                     </div>
                 </div>
             </div>
         </section>
 
-
         <section id="experience" class="bagian-halaman">
-            <h1 class="judul-raksasa" style="font-size: 80px;">EXPERIENCE</h1>
-            <div class="garis-bawah"></div>
-            <p class="teks-utama">Lebih banyak pengalaman akan segera ditambahkan di sini!</p>
+            <h1 class="judul-raksasa" style="background: linear-gradient(90deg, #fb7ba2, #fce043); -webkit-background-clip: text;">STAGE</h1>
+            <div class="garis-bawah" style="background: linear-gradient(90deg, #fb7ba2, #fce043);"></div>
+            
+            <p class="teks-utama" style="margin-bottom: 40px;">Pengalaman Membawa Atmosfer ke Atas Panggung</p>
+
+            <div class="kartu kartu-ungu">
+                <h4>Live Music Performer</h4>
+                <h5>📍 Bagi Kopi Jombang</h5>
+                <p>Menjadi penampil reguler untuk sesi <i>live music</i> akustik dan full-band. Bertanggung jawab sebagai vokalis utama sekaligus membangun interaksi yang hangat dengan para pengunjung kafe untuk menghidupkan suasana akhir pekan.</p>
+            </div>
+
+            <div class="kartu kartu-cyan">
+                <h4>Guest Performer</h4>
+                <h5>📍 Kopi Kelawai</h5>
+                <p>Membawakan setlist lagu dengan berbagai genre untuk menghibur pelanggan. Mengadaptasi gaya bermusik dengan <i>vibes</i> kafe, serta melakukan penyesuaian alat musik secara langsung di atas panggung.</p>
+            </div>
         </section>
 
-        <section id="projects" class="bagian-halaman">
-            <h1 class="judul-raksasa" style="font-size: 80px;">PROJECTS</h1>
-            <div class="garis-bawah"></div>
-            <p class="teks-utama">Daftar proyek dan portofolio akan segera ditambahkan di sini!</p>
+        <section id="skills" class="bagian-halaman">
+            <h1 class="judul-raksasa" style="background: linear-gradient(90deg, #00d2ff, #3a7bd5); -webkit-background-clip: text;">SKILLS</h1>
+            <div class="garis-bawah" style="background: linear-gradient(90deg, #00d2ff, #3a7bd5);"></div>
+
+            <div class="konten-grid">
+                <div class="kolom-kiri">
+                    <div class="kartu kartu-kuning">
+                        <h4>🎙️ Lead Vocal & Stage Presence</h4>
+                        <p>Mampu membawakan lagu dengan penjiwaan kuat dan mengatur dinamika panggung agar audiens tetap terhubung dengan energi lagu yang dibawakan.</p>
+                    </div>
+                    <div class="kartu kartu-ungu">
+                        <h4>🎸 Multi-Instrumentalist</h4>
+                        <p>Tidak hanya bernyanyi, saya mampu mengisi berbagai posisi dalam format band penuh, termasuk bermain Gitar, Bass, Drum, dan Keyboard.</p>
+                    </div>
+                </div>
+                <div class="kolom-kanan">
+                    <div class="kartu kartu-cyan">
+                        <h4>🎛️ Audio Production</h4>
+                        <p>Memiliki pemahaman dasar yang kuat dalam meracik tata suara, mengoperasikan <i>mixer</i>, dan proses <i>recording</i> agar hasil suara memanjakan telinga.</p>
+                    </div>
+                    <div class="kartu kartu-kuning" style="border-color: #fb7ba2;">
+                        <h4>🎨 Visual Art & Drawing</h4>
+                        <p>Menyeimbangkan seni suara dengan seni visual melalui ilustrasi dan gambar, yang seringkali menjadi inspirasi visual untuk identitas musik saya.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </div>
