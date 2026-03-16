@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Farrel Tryardan Kusuma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. CSS AJAIB UNTUK SCROLL MULUS */
+        html {
+            scroll-behavior: smooth; 
+        }
+
+        body {
+            background-color: #080808; 
+            color: #ffffff;            
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- HEADER STICKY (Menempel di Atas Saat Di-scroll) --- */
+        header {
+            position: sticky;
+            top: 0; /* Menempel di paling atas layar */
+            background-color: #080808; /* Background hitam agar menutupi teks di bawahnya */
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100; /* Memastikan header selalu berada di lapisan paling depan */
+            border-bottom: 1px solid #1a1a1a; /* Garis tipis pembatas header */
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        nav a {
+            color: #888888; 
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffffff; 
+            font-weight: 700;
+        }
+
+        /* --- PENGATURAN TIAP BAGIAN (SECTION) --- */
+        .bagian-halaman {
+            min-height: 100vh; /* Tinggi minimal 1 layar penuh */
+            padding-top: 100px; /* Jarak dari atas agar tidak tertutup header */
+        }
+
+        /* --- GAYA TEKS (Sama seperti sebelumnya) --- */
+        .judul-raksasa {
+            font-size: 110px;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+        .garis-bawah {
+            width: 100px;
+            height: 2px;
+            background-color: #ffffff;
+            margin-top: 15px;
+            margin-bottom: 60px;
+        }
+        .konten-grid { display: flex; gap: 80px; }
+        .kolom-kiri { flex: 1.5; }
+        .kolom-kanan { flex: 1; }
+        .teks-utama { font-size: 22px; line-height: 1.6; color: #dddddd; margin-top: 0; }
+        .teks-deskripsi { font-size: 15px; color: #888888; line-height: 1.8; margin-top: 25px; }
+        
+        /* Foto Profil */
+        .foto-profil {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Farrel Tryardan Kusuma</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <section id="home" class="bagian-halaman">
+            <p style="color: #888; letter-spacing: 3px;">HELLO, I AM</p>
+            <h1 style="font-size: 70px; margin: 10px 0;">Farrel Tryardan Kusuma.</h1>
+            <h2 style="color: #888; font-weight: 400;">Information Systems Student & Web Developer.</h2>
+        </section>
+
+
+        <section id="about" class="bagian-halaman">
+            <h1 class="judul-raksasa">ABOUT</h1>
+            <div class="garis-bawah"></div>
+
+            <div class="konten-grid">
+                <div class="kolom-kiri">
+                    <img src="WIN_20260316_04_42_11_Pro.jpg" alt="Foto Farrel" class="foto-profil">
+                    <p class="teks-utama">
+                        Saya adalah mahasiswa Sistem Informasi yang antusias dalam merancang solusi digital yang menggabungkan fungsionalitas dan efisiensi.
+                    </p>
+                    <p class="teks-deskripsi">
+                        Perjalanan saya dimulai dari rasa ingin tahu tentang cara sebuah sistem bekerja, yang kini berkembang menjadi kecintaan dalam membangun aplikasi dan menganalisis proses bisnis. Saat sedang tidak berada di depan layar, saya biasanya mengeksplorasi dunia produksi musik, bermain gitar, atau menikmati video game.
+                    </p>
+                </div>
+
+                <div class="kolom-kanan">
+                    <h3 style="letter-spacing: 3px; border-bottom: 1px solid #222; padding-bottom: 15px;">EXPERTISE</h3>
+                    <div style="margin-bottom: 35px;">
+                        <h4 style="margin: 0 0 10px 0;">System Analysis & Design</h4>
+                        <p style="color: #888; font-size: 14px; line-height: 1.6;">Menganalisis kebutuhan pengguna dan merancang diagram alur untuk memastikan aplikasi berjalan secara logis.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0 0 10px 0;">Web Development</h4>
+                        <p style="color: #888; font-size: 14px; line-height: 1.6;">Membangun antarmuka interaktif dan fungsional, seperti aplikasi Learning Management System (LMS).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="experience" class="bagian-halaman">
+            <h1 class="judul-raksasa" style="font-size: 80px;">EXPERIENCE</h1>
+            <div class="garis-bawah"></div>
+            <p class="teks-utama">Lebih banyak pengalaman akan segera ditambahkan di sini!</p>
+        </section>
+
+        <section id="projects" class="bagian-halaman">
+            <h1 class="judul-raksasa" style="font-size: 80px;">PROJECTS</h1>
+            <div class="garis-bawah"></div>
+            <p class="teks-utama">Daftar proyek dan portofolio akan segera ditambahkan di sini!</p>
+        </section>
+
+    </div>
+
+</body>
+</html>
